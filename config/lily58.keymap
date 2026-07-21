@@ -22,11 +22,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                                                                                &kp N6         &kp N7  &kp N8     &kp N9   &kp N0     &kp GRAVE
-&kp LEFT_ALT      &kp Q   &kp D   &kp R             &kp W   &kp B                                                                                 &kp J          &kp F   &kp U      &kp P    &kp TAB    &kp RIGHT_CONTROL
-&kp SINGLE_QUOTE  &kp A   &kp S   &kp H             &kp T   &kp G                                                                                 &kp Y          &kp N   &kp E      &kp O    &kp I      &kp SLASH
-&lt 1 SEMICOLON   &kp Z   &kp X   &kp M             &kp C   &kp V       &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &kp K          &kp L   &kp COMMA  &kp DOT  &kp MINUS  &mo 2
-                                  &kp LEFT_COMMAND  &mo 2   &kp RETURN  &kp SPACE                            &kp RIGHT_SHIFT                      &kp BACKSPACE  &mo 1   &kp RGUI
+&kp ESC          &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                                                                                &kp N6         &kp N7  &kp N8     &kp N9   &kp N0     &kp GRAVE
+&kp LEFT_ALT     &kp Q   &kp D   &kp R             &kp W   &kp B                                                                                 &kp J          &kp F   &kp U      &kp P    &kp TAB    &kp RIGHT_CONTROL
+&kp MINUS        &kp A   &kp S   &kp H             &kp T   &kp G                                                                                 &kp Y          &kp N   &kp E      &kp O    &kp I      &kp SINGLE_QUOTE
+&lt 1 SEMICOLON  &kp Z   &kp X   &kp M             &kp C   &kp V       &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &kp K          &kp L   &kp COMMA  &kp DOT  &kp MINUS  &mo 2
+                                 &kp LEFT_COMMAND  &mo 2   &kp RETURN  &kp SPACE                            &kp RIGHT_SHIFT                      &kp BACKSPACE  &mo 1   &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
