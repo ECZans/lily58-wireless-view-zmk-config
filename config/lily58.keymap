@@ -100,11 +100,11 @@
 
         hands_down_1 {
             bindings = <
-&trans  &tog 0  &trans  &trans  &trans  &trans                                                                        &trans     &trans    &trans  &trans        &trans           &kp UP_ARROW
-&trans  &trans  &trans  &trans  &trans  &trans                                                                        &kp COLON  &kp HASH  &trans  &kp QUESTION  &kp EXCLAMATION  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                                        &kp EQUAL  &trans    &trans  &trans        &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mt LESS_THAN LEFT_PARENTHESIS    &mt GREATER_THAN RIGHT_PARENTHESIS  &kp PLUS   &trans    &trans  &trans        &kp ASTERISK     &kp DOWN_ARROW
-                        &trans  &trans  &trans  &trans                            &trans                              &trans     &trans    &trans
+&kp TILDE  &tog 0  &trans  &trans  &trans  &trans                                                 &trans          &trans            &trans    &trans        &trans           &kp UP_ARROW
+&trans     &trans  &trans  &trans  &trans  &trans                                                 &kp COLON       &kp GREATER_THAN  &kp HASH  &kp QUESTION  &kp EXCLAMATION  &kp PIPE
+&trans     &trans  &trans  &trans  &trans  &trans                                                 &kp LESS_THAN   &kp SLASH         &trans    &trans        &trans           &kp BACKSLASH
+&trans     &trans  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &trans            &trans    &trans        &kp ASTERISK     &kp DOWN_ARROW
+                           &trans  &trans  &trans  &trans                  &trans                 &trans          &trans            &trans
             >;
         };
 
