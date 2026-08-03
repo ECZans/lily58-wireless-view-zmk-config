@@ -76,11 +76,11 @@
 
         hands_down {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4   &kp N5                           &kp N6               &kp N7                      &kp N8               &kp N9                &kp N0          &kp RIGHT
-&kp ESC    &kp W   &kp F   &kp M     &kp P    &kp V                            &mt COLON SEMICOLON  &mt QUESTION DOUBLE_QUOTES  &mt EXCLAMATION SQT  &mt UNDERSCORE MINUS  &mt PIPE SLASH  &kp Z
-&kp Z      &kp R   &kp S   &kp N     &kp T    &kp B                            &mt AMPERSAND COMMA  &kp A                       &kp E                &kp I                 &kp H           &kp J
-&kp LALT   &kp X   &kp C   &kp L     &kp D    &kp G    &kp LBKT     &kp RBKT   &mt HASH PERIOD      &mt Q U                     &kp O                &kp Y                 &kp K           &kp LEFT_ARROW
-                           &kp LGUI  &kp TAB  &kp RET  &kp SPACE    &kp RSHFT  &kp BACKSPACE        &mo 4                       &kp RGUI
+&kp ESCAPE        &kp N1  &kp N2  &kp N3    &kp N4   &kp N5                           &kp N6               &kp N7                      &kp N8               &kp N9                &kp N0          &kp RIGHT
+&kp LEFT_CONTROL  &kp W   &kp F   &kp M     &kp P    &kp V                            &mt COLON SEMICOLON  &mt QUESTION DOUBLE_QUOTES  &mt EXCLAMATION SQT  &mt UNDERSCORE MINUS  &mt PIPE SLASH  &kp Z
+&kp LEFT_ALT      &kp R   &kp S   &kp N     &kp T    &kp B                            &mt AMPERSAND COMMA  &kp A                       &kp E                &kp I                 &kp H           &kp J
+&kp GLOBE         &kp X   &kp C   &kp L     &kp D    &kp G    &kp LBKT     &kp RBKT   &mt HASH PERIOD      &mt Q U                     &kp O                &kp Y                 &kp K           &kp LEFT_ARROW
+                                  &kp LGUI  &kp TAB  &kp RET  &kp SPACE    &kp RSHFT  &kp BACKSPACE        &mo 4                       &kp RGUI
             >;
         };
 
