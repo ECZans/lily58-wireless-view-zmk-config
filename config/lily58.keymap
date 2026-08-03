@@ -24,11 +24,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC       &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                                                                                &kp N6         &kp N7  &kp N8     &kp N9   &kp N0     &kp GRAVE
-&kp LEFT_ALT  &kp Q   &kp D   &kp R             &kp W   &kp B                                                                                 &kp J          &kp F   &kp U      &kp P    &kp TAB    &kp RIGHT_CONTROL
-&kp SQT       &kp A   &kp S   &kp H             &kp T   &kp G                                                                                 &kp Y          &kp N   &kp E      &kp O    &kp I      &kp SEMICOLON
-&kp MINUS     &kp Z   &kp X   &kp M             &kp C   &kp V       &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &kp K          &kp L   &kp COMMA  &kp DOT  &kp SLASH  &mo 3
-                              &kp LEFT_COMMAND  &mo 3   &kp RETURN  &kp SPACE                            &kp RIGHT_SHIFT                      &kp BACKSPACE  &mo 0   &kp RGUI
+&kp ESC                &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3   &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5                                                                            &mt LCTRL NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt PLUS EQUAL
+&mt GRAVE TILDE        &mt LEFT_BRACKET Q        &mt ASTERISK D          &mt PERCENT R       &mt SLASH W          &mt PLUS B                                                                                      &mt AMPERSAND J     &mt QUESTION F          &mt Q U                &mt UNDERSCORE P               &mt RIGHT_BRACKET SQT           &mt BACKSLASH PIPE
+&mt SQT DOUBLE_QUOTES  &mt SEMICOLON A           &mt LEFT_PARENTHESIS S  &mt EQUAL H         &mt COMMA T          &mt LESS_THAN G                                                                                 &mt GREATER_THAN Y  &mt PERIOD N            &mt DOUBLE_QUOTES E    &mt RIGHT_PARENTHESIS O        &mt MINUS I                     &mt COLON SEMICOLON
+&mt GLOBE TAB          &mt DOLLAR Z              &mt LESS_THAN X         &mt GREATER_THAN M  &mt HASH C           &mt EXCLAMATION V     &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt C K             &mt DOUBLE_QUOTES L     &mt SQT COMMA          &kp MINUS                      &kp SLASH                       &mt CAPS SLASH
+                                                                         &kp LEFT_COMMAND    &mo 4                &mo 3                 &kp SPACE                            &kp RIGHT_SHIFT                      &kp BACKSPACE       &mt RIGHT_ALT RET       &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -36,31 +36,31 @@
 
         hands_down {
             bindings = <
-&mt TILDE GRAVE         &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                             &mt LCTRL NUMBER_6      &mt AMPERSAND N7               &mt ASTERISK N8      &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
-&mt LEFT_CONTROL GRAVE  &mt LEFT_BRACE W          &mt ASTERISK F          &mt PERCENT M      &mt SLASH P          &mt PLUS V                                                                                 &mt HASH SQT            &mt EXCLAMATION DOUBLE_QUOTES  &mt COLON SEMICOLON  &mt UNDERSCORE MINUS     &mt RIGHT_BRACE SLASH     &mt BACKSLASH Z
-&mt LEFT_ALT TILDE      &mt SEMICOLON R           &mt LEFT_PARENTHESIS S  &mt EQUAL N        &mt COMMA T          &mt LESS_THAN B                                                                            &mt GREATER_THAN COMMA  &mt AMPERSAND A                &mt QUESTION E       &mt RIGHT_PARENTHESIS I  &mt MINUS H               &mt RIGHT_CONTROL J
-&mt GLOBE TAB           &kp X                     &mt K C                 &kp L              &kp D                &kp G            &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt COMMA PERIOD        &mt Q U                        &mt MINUS O          &mt Y SLASH              &kp K                     &kp CAPSLOCK
-                                                                          &kp LGUI           &mo 4                &kp RET          &kp SPACE                            &kp RSHFT                            &kp BACKSPACE           &mo 5                          &kp RGUI
+&kp ESCAPE              &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                               &mt LCTRL NUMBER_6       &mt AMPERSAND N7            &mt ASTERISK N8      &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
+&mt LEFT_CONTROL GRAVE  &mt LEFT_BRACKET W        &mt ASTERISK F          &mt PERCENT M      &mt SLASH P          &mt PLUS V                                                                                   &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON SEMICOLON  &mt UNDERSCORE MINUS     &mt RIGHT_BRACKET SLASH   &mt BACKSLASH Z
+&mt LEFT_ALT TILDE      &mt SEMICOLON R           &mt LEFT_PARENTHESIS S  &mt EQUAL N        &mt COMMA T          &mt LESS_THAN B                                                                              &mt GREATER_THAN PERIOD  &mt PERIOD A                &mt DOUBLE_QUOTES E  &mt RIGHT_PARENTHESIS I  &mt MINUS H               &mt RIGHT_CONTROL J
+&mt GLOBE TAB           &mt DOLLAR X              &mt K C                 &kp L              &mt HASH D           &mt EXCLAMATION G  &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt PERIOD COMMA         &mt Q U                     &mt MINUS O          &mt Y SLASH              &kp K                     &kp CAPSLOCK
+                                                                          &kp LGUI           &mo 4                &mo 3              &kp SPACE                            &kp RSHFT                            &kp BACKSPACE            &mt RIGHT_ALT RET           &kp RGUI
             >;
         };
 
         x1.en.ergodox {
             bindings = <
-&mt TILDE GRAVE  &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3  &mt N4 NUMBER_4  &mt PERCENT N5                                                                             &mt LCTRL NUMBER_6  &mt AMPERSAND N7            &mt ASTERISK N8    &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
-&mt DOLLAR Z     &mt GREATER_THAN Q        &mt ASTERISK P          &mt PERCENT L      &mt K C          &mt PLUS F                                                                                 &mt HASH SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON O        &mt UNDERSCORE Y         &mt SLASH K               &mt PIPE BACKSLASH
-&mt TILDE V      &mt SEMICOLON R           &mt LEFT_PARENTHESIS N  &mt EQUAL F        &mt COMMA S      &mt LESS_THAN D                                                                            &mt Q U             &mt AMPERSAND A             &mt QUESTION E     &mt RIGHT_PARENTHESIS I  &mt MINUS H               &kp RIGHT_CONTROL
-&mt GLOBE TAB    &mt NUMBER_1 X            &mt NUMBER_2 B          &mt NUMBER_3 M     &mt NUMBER_4 G   &mt N5 W         &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt NUMBER_6 COMMA  &mt N7 PERIOD               &mt N8 MINUS       &mt N9 SLASH             &mt N0 J                  &kp CAPS
-                                                                   &kp LEFT_COMMAND   &mo 4            &mo 0            &kp SPACE                            &kp RSHFT                            &kp BSPC            &mt RIGHT_ALT RET           &kp RIGHT_COMMAND
+&kp ESCAPE     &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3   &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                               &mt LCTRL NUMBER_6       &mt AMPERSAND N7            &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
+&mt GRAVE Z    &mt LEFT_BRACKET Q        &mt ASTERISK P          &mt PERCENT L       &mt K C              &mt PLUS F                                                                                   &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON O           &mt UNDERSCORE Y         &mt RIGHT_BRACKET K       &mt BACKSLASH PIPE
+&mt TILDE V    &mt SEMICOLON R           &mt LEFT_PARENTHESIS N  &mt EQUAL F         &mt COMMA S          &mt LESS_THAN D                                                                              &mt Q U                  &mt PERIOD A                &mt DOUBLE_QUOTES E   &mt RIGHT_PARENTHESIS I  &mt MINUS H               &kp RIGHT_CONTROL
+&mt GLOBE TAB  &mt DOLLAR X              &mt LESS_THAN B         &mt GREATER_THAN M  &mt HASH G           &mt EXCLAMATION W  &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt DOUBLE_QUOTES COMMA  &mt SQT PERIOD              &mt UNDERSCORE MINUS  &kp SLASH                &kp J                     &kp CAPS
+                                                                 &kp LEFT_COMMAND    &mo 4                &mo 3              &kp SPACE                            &kp RSHFT                            &kp BSPC                 &mt RIGHT_ALT RET           &kp RIGHT_COMMAND
             >;
         };
 
         symbols {
             bindings = <
-&kp ESCAPE  &tog 0           &trans       &trans    &trans      &trans                                                      &trans     &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp BACKSLASH   &kp PIPE        &trans
-&trans      &trans           &trans       &trans    &trans      &trans                                                      &kp PLUS   &kp LESS_THAN   &kp GREATER_THAN  &kp UNDERSCORE  &kp QUESTION    &kp EXCLAMATION
-&trans      &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                                                 &kp CARET  &kp AMPERSAND   &kp ASTERISK      &trans          &kp UP_ARROW    &trans
-&trans      &trans           &trans       &trans    &trans      &trans       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp TILDE       &kp GRAVE         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                                          &trans    &trans      &trans       &trans                  &trans                 &trans     &trans          &trans
+&kp ESCAPE  &kp F1          &kp F2                &kp F3            &kp F4        &kp F5                                                             &kp F6            &kp F7             &kp F8             &kp F9                 &kp F10          &tog 0
+&kp GRAVE   &kp LEFT_BRACE  &kp ASTERISK          &kp PERCENT       &kp SLASH     &kp PLUS                                                           &kp AMPERSAND     &kp QUESTION       &kp COLON          &kp UNDERSCORE         &kp RIGHT_BRACE  &mt NON_US_BACKSLASH PIPE
+&kp TILDE   &kp SEMICOLON   &kp LEFT_PARENTHESIS  &kp EQUAL         &kp COMMA     &kp LESS_THAN                                                      &kp GREATER_THAN  &kp PERIOD         &kp DOUBLE_QUOTES  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp HASH
+&kp TAB     &mt DOLLAR N1   &kp N2                &kp N3            &mt HASH N4   &mt EXCLAMATION N5  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N6            &kp N7             &kp N8             &kp N9                 &kp N0           &kp CAPSLOCK
+                                                  &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL    &kp SPACE               &kp RIGHT_SHIFT        &kp BACKSPACE     &mt RIGHT_ALT RET  &kp RIGHT_COMMAND
             >;
         };
 
@@ -94,7 +94,7 @@
             >;
         };
 
-        arrows_selection {
+        arrows_+_selection {
             bindings = <
 &none  &none           &tog 0          &none             &none           &none                      &none      &none           &none              &tog 0          &none           &none
 &none  &kp ESCAPE      &kp UP_ARROW    &mkp LCLK         &kp BACKSPACE   &none                      &none      &kp BACKSPACE   &mkp LCLK          &kp UP_ARROW    &kp ESCAPE      &none
