@@ -78,22 +78,12 @@
             label = "raise";
         };
 
-        hands_down_lower {
-            bindings = <
-&kp ESCAPE  &tog 0           &trans       &trans    &trans      &trans                                                      &trans     &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp BACKSLASH   &kp PIPE        &trans
-&trans      &trans           &trans       &trans    &trans      &trans                                                      &kp PLUS   &kp LESS_THAN   &kp GREATER_THAN  &kp UNDERSCORE  &kp QUESTION    &kp EXCLAMATION
-&trans      &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                                                 &kp CARET  &kp AMPERSAND   &kp ASTERISK      &trans          &kp UP_ARROW    &trans
-&trans      &trans           &trans       &trans    &trans      &trans       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp TILDE       &kp GRAVE         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                                          &trans    &trans      &trans       &trans                  &trans                 &trans     &trans          &trans
-            >;
-        };
-
         arrows_+_selection {
             bindings = <
 &none  &none           &tog 0          &none             &none           &none                      &none      &none           &none              &tog 0          &none           &none
 &none  &kp ESCAPE      &kp UP_ARROW    &mkp LCLK         &kp BACKSPACE   &none                      &none      &kp BACKSPACE   &mkp LCLK          &kp UP_ARROW    &kp ESCAPE      &none
 &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &mkp RCLK       &none                      &none      &mkp RCLK       &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT       &none
-&mo 6  &kp LEFT_SHIFT  &none           &kp RIGHT_SHIFT   &kp TAB         &none      &none    &none  &none      &kp TAB         &kp RIGHT_SHIFT    &none           &kp LEFT_SHIFT  &mo 6
+&mo 5  &kp LEFT_SHIFT  &none           &kp RIGHT_SHIFT   &kp TAB         &none      &none    &none  &none      &kp TAB         &kp RIGHT_SHIFT    &none           &kp LEFT_SHIFT  &mo 5
                                        &sk LEFT_COMMAND  &sk LEFT_SHIFT  &kp SPACE  &mo 0    &mo 0  &kp SPACE  &sk LEFT_SHIFT  &sk RIGHT_COMMAND
             >;
         };
