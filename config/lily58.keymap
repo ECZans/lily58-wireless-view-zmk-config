@@ -6,80 +6,86 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
+    combos { compatible = "zmk,combos"; };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+        workman {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
             display-name = "Base";
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
-&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                        &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BSPC &kp RGUI
+&kp ESC                &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3   &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5                                                                            &mt LCTRL NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt PLUS EQUAL
+&mt GRAVE TILDE        &mt LEFT_BRACKET Q        &mt ASTERISK D          &mt PERCENT R       &mt SLASH W          &mt PLUS B                                                                                      &mt AMPERSAND J     &mt QUESTION F          &mt Q U                &mt UNDERSCORE P               &mt RIGHT_BRACKET SQT           &mt BACKSLASH PIPE
+&mt SQT DOUBLE_QUOTES  &mt SEMICOLON A           &mt LEFT_PARENTHESIS S  &mt EQUAL H         &mt COMMA T          &mt LESS_THAN G                                                                                 &mt GREATER_THAN Y  &mt PERIOD N            &mt DOUBLE_QUOTES E    &mt RIGHT_PARENTHESIS O        &mt MINUS I                     &mt COLON SEMICOLON
+&mt GLOBE TAB          &mt DOLLAR Z              &mt LESS_THAN X         &mt GREATER_THAN M  &mt HASH C           &mt EXCLAMATION V     &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt C K             &mt DOUBLE_QUOTES L     &mt SQT COMMA          &kp MINUS                      &kp SLASH                       &mt CAPS SLASH
+                                                                         &kp LEFT_COMMAND    &mo 4                &mo 3                 &kp SPACE                            &kp RIGHT_SHIFT                      &kp BACKSPACE       &mt RIGHT_ALT RET       &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
-            display-name = "Lower";
+        hands_down {
             bindings = <
-&bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &trans           &trans            &trans            &trans       &trans    &trans   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
-                                              &trans            &trans       &trans    &trans   &trans    &trans    &trans    &trans
+&kp ESCAPE              &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                               &mt LCTRL NUMBER_6       &mt AMPERSAND N7            &mt ASTERISK N8      &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
+&mt LEFT_CONTROL GRAVE  &mt LEFT_BRACKET W        &mt ASTERISK F          &mt PERCENT M      &mt SLASH P          &mt PLUS V                                                                                   &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON SEMICOLON  &mt UNDERSCORE MINUS     &mt RIGHT_BRACKET SLASH   &mt BACKSLASH Z
+&mt LEFT_ALT TILDE      &mt SEMICOLON R           &mt LEFT_PARENTHESIS S  &mt EQUAL N        &mt COMMA T          &mt LESS_THAN B                                                                              &mt GREATER_THAN PERIOD  &mt PERIOD A                &mt DOUBLE_QUOTES E  &mt RIGHT_PARENTHESIS I  &mt MINUS H               &mt RIGHT_CONTROL J
+&mt GLOBE TAB           &mt DOLLAR X              &mt K C                 &kp L              &mt HASH D           &mt EXCLAMATION G  &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt PERIOD COMMA         &mt Q U                     &mt MINUS O          &mt Y SLASH              &kp K                     &kp CAPSLOCK
+                                                                          &kp LGUI           &mo 4                &mo 3              &kp SPACE                            &kp RSHFT                            &kp BACKSPACE            &mt RIGHT_ALT RET           &kp RGUI
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-// |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-// |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-//                     |      |      |      |        |  |       |      |       |       |
-            display-name = "Raise";
+        x1.en.ergodox {
             bindings = <
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
-                        &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
+&kp ESCAPE     &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2    &mt HASH NUMBER_3   &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                               &mt LCTRL NUMBER_6       &mt AMPERSAND N7            &mt ASTERISK N8       &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
+&mt GRAVE Z    &mt LEFT_BRACKET Q        &mt ASTERISK P          &mt PERCENT L       &mt K C              &mt PLUS F                                                                                   &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON O           &mt UNDERSCORE Y         &mt RIGHT_BRACKET K       &mt BACKSLASH PIPE
+&mt TILDE V    &mt SEMICOLON R           &mt LEFT_PARENTHESIS N  &mt EQUAL F         &mt COMMA S          &mt LESS_THAN D                                                                              &mt Q U                  &mt PERIOD A                &mt DOUBLE_QUOTES E   &mt RIGHT_PARENTHESIS I  &mt MINUS H               &kp RIGHT_CONTROL
+&mt GLOBE TAB  &mt DOLLAR X              &mt LESS_THAN B         &mt GREATER_THAN M  &mt HASH G           &mt EXCLAMATION W  &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt DOUBLE_QUOTES COMMA  &mt SQT PERIOD              &mt UNDERSCORE MINUS  &kp SLASH                &kp J                     &kp CAPS
+                                                                 &kp LEFT_COMMAND    &mo 4                &mo 3              &kp SPACE                            &kp RSHFT                            &kp BSPC                 &mt RIGHT_ALT RET           &kp RIGHT_COMMAND
+            >;
+        };
+
+        symbols {
+            bindings = <
+&kp ESCAPE              &kp F1          &kp F2                &kp F3            &kp F4        &kp F5                                                             &kp F6            &kp F7             &kp F8             &kp F9                 &kp F10          &tog 4
+&kp GRAVE               &kp LEFT_BRACE  &kp ASTERISK          &kp PERCENT       &kp SLASH     &kp PLUS                                                           &kp AMPERSAND     &kp QUESTION       &kp COLON          &kp UNDERSCORE         &kp RIGHT_BRACE  &mt NON_US_BACKSLASH PIPE
+&mt LEFT_CONTROL TILDE  &kp SEMICOLON   &kp LEFT_PARENTHESIS  &kp EQUAL         &kp COMMA     &kp LESS_THAN                                                      &kp GREATER_THAN  &kp PERIOD         &kp DOUBLE_QUOTES  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp HASH
+&kp TAB                 &mt DOLLAR N1   &kp N2                &kp N3            &mt HASH N4   &mt EXCLAMATION N5  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N6            &kp N7             &kp N8             &kp N9                 &kp N0           &kp CAPSLOCK
+                                                              &kp LEFT_COMMAND  &kp LEFT_ALT  &trans              &kp SPACE               &kp RIGHT_SHIFT        &kp BACKSPACE     &mt RIGHT_ALT RET  &kp RIGHT_COMMAND
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            label = "lower";
         };
 
-        extra_1 {
-            status = "reserved";
+        system {
+            bindings = <
+&tog 0     &tog 1          &tog 2          &none             &none           &none                                          &kp C_PREV     &kp C_PLAY_PAUSE  &kp C_NEXT         &none               &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC
+&none      &none           &mmv MOVE_UP    &none             &mkp RCLK       &msc SCRL_UP                                   &mt HOME N7    &mt PIPE N8       &mt PAGE_UP N9     &mt MINUS PLUS      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&mkp MCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp LCLK       &msc SCRL_DOWN                                 &mt KP_NUM N4  &mt PERCENT N5    &mt CARET N6       &mt SLASH ASTERISK  &kp UP_ARROW          &none
+&none      &none           &none           &none             &msc SCRL_LEFT  &msc SCRL_RIGHT  &none        &mt INS N0       &mt END N1     &kp N2            &mt PAGE_DOWN N3   &kp LEFT_ARROW      &kp DOWN_ARROW        &kp RIGHT_ARROW
+                                           &kp LEFT_COMMAND  &trans          &mkp RCLK        &mkp LCLK    &kp RIGHT_SHIFT  &kp BACKSPACE  &kp RET           &kp RIGHT_COMMAND
+            >;
+
+            label = "raise";
         };
 
-        extra_2 {
-            status = "reserved";
-        };
-
-        extra_3 {
-            status = "reserved";
+        arrows_+_selection {
+            bindings = <
+&none  &none           &tog 0          &none             &none           &none                      &none      &none           &none              &tog 0          &none           &none
+&none  &kp ESCAPE      &kp UP_ARROW    &mkp LCLK         &kp BACKSPACE   &none                      &none      &kp BACKSPACE   &mkp LCLK          &kp UP_ARROW    &kp ESCAPE      &none
+&none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &mkp RCLK       &none                      &none      &mkp RCLK       &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT       &none
+&mo 5  &kp LEFT_SHIFT  &none           &kp RIGHT_SHIFT   &kp TAB         &none      &none    &none  &none      &kp TAB         &kp RIGHT_SHIFT    &none           &kp LEFT_SHIFT  &mo 5
+                                       &sk LEFT_COMMAND  &sk LEFT_SHIFT  &kp SPACE  &mo 0    &mo 0  &kp SPACE  &sk LEFT_SHIFT  &sk RIGHT_COMMAND
+            >;
         };
     };
 };
