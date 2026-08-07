@@ -22,7 +22,7 @@
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
-            display-name = "Base";
+            display-name = "Wkmn";
             bindings = <
 &kp ESC                &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5                                                                            &mt LCTRL NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt PLUS EQUAL
 &mt GRAVE TILDE        &kp Q                     &kp D                 &kp R              &kp W                &kp B                                                                                           &kp J               &kp F                   &mt Q U                &kp P                          &mt UNDERSCORE MINUS            &mt QUESTION SLASH
@@ -42,6 +42,8 @@
 &mt GLOBE TAB           &kp X                     &mt K C               &kp L              &kp D                &kp G           &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt PERIOD COMMA         &mt Q U                     &kp O                &kp Y                    &kp K                     &kp CAPSLOCK
                                                                         &kp LGUI           &mo 5                &mo 4           &kp SPACE                            &kp RSHFT                            &kp BACKSPACE            &mt RIGHT_ALT RET           &kp RGUI
             >;
+
+            label = "Hands";
         };
 
         x1.en.ergodox {
@@ -52,10 +54,12 @@
 &mt GLOBE TAB  &kp X                     &kp B                 &kp M              &kp G                &kp W           &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt DOUBLE_QUOTES COMMA  &mt SQT PERIOD              &mt UNDERSCORE MINUS  &kp SLASH                &kp J                     &kp CAPS
                                                                &kp LEFT_COMMAND   &mo 5                &mo 4           &kp SPACE                            &kp RSHFT                            &kp BSPC                 &mt RIGHT_ALT RET           &kp RIGHT_COMMAND
             >;
+
+            label = "X1";
         };
 
         hs-indeks.en.ergodox {
-            display-name = "Base";
+            display-name = "Indks";
             bindings = <
 &kp ESC        &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5                                                                            &mt LCTRL NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt PLUS EQUAL
 &kp J          &kp Q                     &kp P                 &kp L              &kp C                &kp G                                                                                           &kp DOUBLE_QUOTES   &mt Q U                 &kp O                  &mt UNDERSCORE MINUS           &mt COLON SEMICOLON             &mt BACKSLASH PIPE
@@ -65,6 +69,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            label = "Indeks";
         };
 
         symbols {
@@ -76,7 +81,7 @@
                                                               &kp LEFT_COMMAND  &kp LEFT_ALT  &trans              &kp SPACE               &kp RIGHT_SHIFT        &kp BACKSPACE     &mt RIGHT_ALT RET  &kp RIGHT_COMMAND
             >;
 
-            label = "lower";
+            label = "Symb";
         };
 
         system {
@@ -88,7 +93,7 @@
                                            &kp LEFT_COMMAND  &trans          &mkp RCLK        &mkp LCLK    &kp RIGHT_SHIFT  &kp BACKSPACE  &kp RET           &kp RIGHT_COMMAND
             >;
 
-            label = "raise";
+            label = "Sys";
         };
 
         arrows_+_selection {
