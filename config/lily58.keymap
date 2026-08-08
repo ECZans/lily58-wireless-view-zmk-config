@@ -34,16 +34,15 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        hands_down {
+        hands_inverted {
+            label = "HndInv";
             bindings = <
 &kp ESCAPE       &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                            &mt LCTRL NUMBER_6       &mt AMPERSAND N7            &mt ASTERISK N8      &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
-&mt TILDE GRAVE  &kp W                     &kp F                 &kp M              &kp P                &kp V                                                                                     &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON SEMICOLON  &mt UNDERSCORE MINUS     &mt RIGHT_BRACKET SLASH   &mt RIGHT_CONTROL Z
+&mt TILDE GRAVE  &kp W                     &kp F                 &kp M              &kp P                &kp V                                                                                     &mt LESS_THAN COMMA      &kp U                       &kp O                &kp Y                    &kp K                     &mt RIGHT_CONTROL Z
 &kp Q            &kp R                     &kp S                 &kp N              &kp T                &kp B                                                                                     &mt GREATER_THAN PERIOD  &kp A                       &kp E                &kp I                    &kp H                     &kp J
-&mt GLOBE TAB    &kp X                     &mt K C               &kp L              &kp D                &kp G           &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt PERIOD COMMA         &kp U                       &kp O                &kp Y                    &kp K                     &kp CAPSLOCK
+&mt GLOBE TAB    &kp X                     &mt K C               &kp L              &kp D                &kp G           &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON SEMICOLON  &mt UNDERSCORE MINUS     &kp SLASH                 &kp CAPSLOCK
                                                                  &kp LGUI           &mo 5                &mo 4           &kp SPACE                            &kp RSHFT                            &kp BACKSPACE            &mt RIGHT_ALT RET           &kp RGUI
             >;
-
-            label = "Hands";
         };
 
         x1.en.ergodox {
@@ -96,12 +95,24 @@
             label = "Sys";
         };
 
+        hands_down {
+            bindings = <
+&kp ESCAPE       &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5                                                                            &mt LCTRL NUMBER_6       &mt AMPERSAND N7            &mt ASTERISK N8      &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &mt PLUS EQUAL
+&mt TILDE GRAVE  &kp W                     &kp F                 &kp M              &kp P                &kp V                                                                                     &mt AMPERSAND SQT        &mt QUESTION DOUBLE_QUOTES  &mt COLON SEMICOLON  &mt UNDERSCORE MINUS     &mt RIGHT_BRACKET SLASH   &mt RIGHT_CONTROL Z
+&kp Q            &kp R                     &kp S                 &kp N              &kp T                &kp B                                                                                     &mt GREATER_THAN PERIOD  &kp A                       &kp E                &kp I                    &kp H                     &kp J
+&mt GLOBE TAB    &kp X                     &mt K C               &kp L              &kp D                &kp G           &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &mt PERIOD COMMA         &kp U                       &kp O                &kp Y                    &kp K                     &kp CAPSLOCK
+                                                                 &kp LGUI           &mo 5                &mo 4           &kp SPACE                            &kp RSHFT                            &kp BACKSPACE            &mt RIGHT_ALT RET           &kp RGUI
+            >;
+
+            label = "Hands";
+        };
+
         arrows_+_selection {
             bindings = <
 &none  &none           &tog 0          &none             &none           &none                      &none      &none           &none              &tog 0          &none           &none
 &none  &kp ESCAPE      &kp UP_ARROW    &mkp LCLK         &kp BACKSPACE   &none                      &none      &kp BACKSPACE   &mkp LCLK          &kp UP_ARROW    &kp ESCAPE      &none
 &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &mkp RCLK       &none                      &none      &mkp RCLK       &kp LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT       &none
-&mo 6  &kp LEFT_SHIFT  &none           &kp RIGHT_SHIFT   &kp TAB         &none      &none    &none  &none      &kp TAB         &kp RIGHT_SHIFT    &none           &kp LEFT_SHIFT  &mo 6
+&mo 8  &kp LEFT_SHIFT  &none           &kp RIGHT_SHIFT   &kp TAB         &none      &none    &none  &none      &kp TAB         &kp RIGHT_SHIFT    &none           &kp LEFT_SHIFT  &mo 8
                                        &sk LEFT_COMMAND  &sk LEFT_SHIFT  &kp SPACE  &mo 0    &mo 0  &kp SPACE  &sk LEFT_SHIFT  &sk RIGHT_COMMAND
             >;
         };
