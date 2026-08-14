@@ -184,7 +184,7 @@
 &mt AMPERSAND HASH   &mt UNDERSCORE MINUS      &kp P                    &kp U                &kp F             &kp J                                                                                         &kp J               &kp F                   &kp U                  &kp P                          &mt UNDERSCORE MINUS            &mt AMPERSAND HASH
 &kp SPACE            &kp I                     &kp O                    &kp E                &kp N             &kp Y                                                                                         &kp Y               &kp N                   &kp E                  &kp O                          &kp I                           &kp SPACE
 &mt COLON SEMICOLON  &mt QUESTION SLASH        &mt GREATER_THAN PERIOD  &mt LESS_THAN COMMA  &kp L             &kp K               &mt LEFT_PARENTHESIS LEFT_BRACKET    &mt RIGHT_PARENTHESIS RIGHT_BRACKET  &kp K               &kp L                   &mt LESS_THAN COMMA    &mt GREATER_THAN PERIOD        &mt QUESTION SLASH              &mt COLON SEMICOLON
-                                                                        &kp RET              &kp BACKSPACE     &sk SPACE           &mo 13                               &mo 13                               &sk SPACE           &kp BACKSPACE           &kp RETURN
+                                                                        &kp RET              &kp BACKSPACE     &sk SPACE           &lt 13 SPACE                         &lt 13 SPACE                         &sk SPACE           &kp BACKSPACE           &kp RETURN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
